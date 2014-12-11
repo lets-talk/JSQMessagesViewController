@@ -782,6 +782,7 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
     heightFromBottom = MAX(0.0f, heightFromBottom);
     
     [self jsq_setToolbarBottomLayoutGuideConstant:heightFromBottom];
+    }
 }
 
 - (void)keyboardControllerKeyboardDidHide:(JSQMessagesKeyboardController *)keyboardController
