@@ -97,7 +97,7 @@
  *  @see JSQMessagesAvatarImageFactory.
  *  @see JSQMessagesCollectionViewFlowLayout.
  */
-- (id<JSQMessageAvatarImageDataSource>)collectionView:(JSQMessagesCollectionView *)collectionView avatarImageDataForItemAtIndexPath:(NSIndexPath *)indexPath;
+- (id<JSQMessageAvatarImageDataSource>)collectionView:(JSQMessagesCollectionView *)collectionView avatarImageDataForItemAtIndexPath:(NSIndexPath *)indexPath successBlock:(void(^)(UIImage *))successBlock; 
 
 @optional
 
