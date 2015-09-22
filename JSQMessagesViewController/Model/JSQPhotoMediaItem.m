@@ -49,6 +49,12 @@
     _cachedImageView = nil;
 }
 
+- (void)clearCachedMediaViews
+{
+    [super clearCachedMediaViews];
+    _cachedImageView = nil;
+}
+
 #pragma mark - Setters
 
 - (void)setImage:(UIImage *)image
@@ -123,7 +129,7 @@
 
 - (instancetype)copyWithZone:(NSZone *)zone
 {
-    JSQPhotoMediaItem *copy = [[[self class] allocWithZone:zone] initWithImage:self.image];
+    JSQPhotoMediaItem *copy = [[JSQPhotoMediaItem allocWithZone:zone] initWithImage:self.image];
     copy.appliesMediaViewMaskAsOutgoing = self.appliesMediaViewMaskAsOutgoing;
     return copy;
 }

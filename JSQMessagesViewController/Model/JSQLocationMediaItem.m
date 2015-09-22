@@ -55,6 +55,12 @@
     _cachedMapImageView = nil;
 }
 
+- (void)clearCachedMediaViews
+{
+    [super clearCachedMediaViews];
+    _cachedMapImageView = nil;
+}
+
 #pragma mark - Setters
 
 - (void)setLocation:(CLLocation *)location
@@ -114,6 +120,9 @@
                   MKAnnotationView *pin = [[MKPinAnnotationView alloc] initWithAnnotation:nil reuseIdentifier:nil];
                   CGPoint coordinatePoint = [snapshot pointForCoordinate:location.coordinate];
                   UIImage *image = snapshot.image;
+                  
+                  coordinatePoint.x += pin.centerOffset.x - (CGRectGetWidth(pin.bounds) / 2.0);
+                  coordinatePoint.y += pin.centerOffset.y - (CGRectGetHeight(pin.bounds) / 2.0);
                   
                   UIGraphicsBeginImageContextWithOptions(image.size, YES, image.scale);
                   {
