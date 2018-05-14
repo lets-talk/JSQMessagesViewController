@@ -1,3 +1,8 @@
+This is just kept here for legacy reasons.
+Please, don't use this fork.
+
+It adds subtle bugs to an old version of an unmaintained library.
+
 [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 # :warning: Deprecated :warning:
